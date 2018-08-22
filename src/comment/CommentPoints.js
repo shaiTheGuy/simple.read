@@ -8,8 +8,6 @@ import { upvoteComment, downvoteComment } from '../api/CommentAPI';
 export default class CommentPoints extends Component {
     constructor(props){
         super(props);
-        this.handleUpvote = this.handleUpvote.bind(this);
-        this.handleDownvote = this.handleDownvote.bind(this);
     }
 
     handleUpvote(){
