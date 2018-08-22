@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Comment from "./Comment";
-import { getCommentsByPost } from "../api/CommentAPI";
+import { getCommentsByPost, initComments } from "../api/CommentAPI";
 
 
 export default class CommentList extends Component {
@@ -14,6 +14,7 @@ export default class CommentList extends Component {
     }
 
     componentDidMount() {
+        initComments();
         this.fetchCommentList();
     }
 

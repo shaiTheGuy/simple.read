@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Reply from "./Reply";
-import { getRepliesByComment } from "../api/ReplyAPI";
+import { getRepliesByComment, initReplies } from "../api/ReplyAPI";
 
 export default class ReplyList extends Component {
     replies = [];
@@ -13,6 +13,7 @@ export default class ReplyList extends Component {
     }
 
     componentDidMount() {
+        initReplies();
         this.fetchReplyList();
     }
 

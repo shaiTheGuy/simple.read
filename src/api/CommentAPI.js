@@ -69,8 +69,10 @@ const comments = [{
 
 let commentsLocalStorage = JSON.parse(localStorage.getItem("comments"));
 
-if(commentsLocalStorage === null){
-    localStorage.setItem("comments", JSON.stringify(comments));
+function initComments(){
+    if(commentsLocalStorage === null){
+        localStorage.setItem("comments", JSON.stringify(comments));
+    }
 }
 
 function getCommentsByPost(postId){
