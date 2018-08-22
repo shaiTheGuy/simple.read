@@ -1,0 +1,22 @@
+.reply {
+    padding-left: 0%;
+}
+
+.reply-header-username-text {
+    font-size: 0.7em;
+}
+
+.reply-header-date-text {
+    font-size: 0.65em;
+}
+
+.reply-body {
+    font-size: 0.7em;
+    padding: 0% 0% 1% 0%;
+    margin: 0% 0% 0% 0;
+    border-bottom: lightgrey solid 1px;
+}
+
+.reply-body-col {
+    padding-left: 0;
+}

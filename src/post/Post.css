@@ -1,0 +1,11 @@
+.post-title {
+    padding: 0;
+}
+
+.add-comment-button {
+    padding-left: 0;
+}
+
+.add-comment-button:link {
+    text-decoration: none;
+}

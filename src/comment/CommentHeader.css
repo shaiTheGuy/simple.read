@@ -1,0 +1,23 @@
+.comment-header {
+    font-size: 0.8em;
+    background: #F7F7F7;
+    margin-top: 2%;
+}
+
+.comment-header-col {
+    padding-top: 0.5%;
+    grid-auto-columns: min-content;
+}
+
+.comment-header-date-text {
+    font-size: 0.7em;
+}
+
+.comment-header-icon {
+    padding: 0 0 0 0;
+    color: black;
+}
+
+.comment-header-icon:hover{
+    color: lightgrey;
+}

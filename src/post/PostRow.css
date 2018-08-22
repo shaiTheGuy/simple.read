@@ -1,0 +1,22 @@
+.post-list-stats-col {
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.post-list-title-col{
+    font-size: 0.9em;
+    border-left: lightgrey solid 2px;
+    border-right: lightgrey solid 2px;
+}
+
+.post-list-row {
+    border: lightgrey solid 1px;
+    border-radius: 2px;
+    margin-bottom: 0.5%;
+    padding: 1% 0 1% 0;
+    text-decoration: none;
+}
+
+.post-list-row:hover {
+    background-color: #F7F7F7;
+}

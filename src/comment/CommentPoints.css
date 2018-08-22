@@ -1,0 +1,15 @@
+.comment-body-points-text {
+    font-size: 0.8em;
+}
+
+.comment-body-vote-button {
+    color: black;
+}
+
+.comment-body-vote-button:hover {
+    color: lightgrey;
+}
+
+
+
+
