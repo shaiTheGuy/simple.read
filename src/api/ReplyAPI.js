@@ -23,8 +23,10 @@ const replies = [{
 
 let repliesLocalStorage = JSON.parse(localStorage.getItem("replies"));
 
-if(repliesLocalStorage === null){
-    localStorage.setItem("replies", JSON.stringify(replies));
+function initReplies(){
+    if(repliesLocalStorage === null){
+        localStorage.setItem("posts", JSON.stringify(replies));
+    }
 }
 
 function getRepliesByComment(postId, commentId){
@@ -51,4 +53,4 @@ function addReply(reply){
     localStorage.setItem("replies", JSON.stringify(oldReplies));
 }
 
-export {replies, getRepliesByComment, addReply};
+export {initReplies, replies, getRepliesByComment, addReply};

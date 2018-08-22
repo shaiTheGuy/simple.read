@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getPosts } from '../api/PostAPI';
+import { initPosts, getPosts } from '../api/PostAPI';
 import { Container } from 'reactstrap';
 import { Link } from "react-router-dom";
 import './PostList.css';

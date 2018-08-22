@@ -65,22 +65,11 @@ const posts = [{
 
 let postsLocalStorage = JSON.parse(localStorage.getItem("posts"));
 
-if(postsLocalStorage === null){
-    localStorage.setItem("posts", JSON.stringify(posts));
-}
-
 //postsLocalStorage = JSON.parse(localStorage.getItem("posts"));
 function initPosts(){
     if(postsLocalStorage === null){
         localStorage.setItem("posts", JSON.stringify(posts));
     }
-    let oldPosts = postsLocalStorage;
-
-    posts.map(post => {
-        oldPosts.push(post);
-    });
-
-    localStorage.setItem("posts", JSON.stringify(oldPosts));
 }
 
 function getPosts(){
@@ -109,4 +98,4 @@ function addPost(post){
     localStorage.setItem("posts", JSON.stringify(oldPosts));
 }
 
-export {getPosts, getPostById, addPost};
+export {initPosts, getPosts, getPostById, addPost};

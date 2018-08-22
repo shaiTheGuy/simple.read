@@ -111,4 +111,4 @@ function downvoteComment(postId, commentId){
     });
 }
 
-export {getCommentsByPost, addComment, upvoteComment, downvoteComment};
+export {initComments, getCommentsByPost, addComment, upvoteComment, downvoteComment};
