@@ -88,7 +88,7 @@ function getPostById(postId){
 }
 
 function addPost(post){
-    let oldPosts = postsLocalStorage;
+    let oldPosts = JSON.parse(localStorage.getItem("posts"));
     let newPostId = Number(oldPosts[oldPosts.length - 1].id) + Number(1);
     
     post.id = newPostId;
