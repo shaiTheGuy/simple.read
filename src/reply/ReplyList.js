@@ -13,7 +13,6 @@ export default class ReplyList extends Component {
     }
 
     componentDidMount() {
-        initReplies();
         this.fetchReplyList();
     }
 

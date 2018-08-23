@@ -63,13 +63,14 @@ const posts = [{
     comments: 0
 }];
 
-let postsLocalStorage = JSON.parse(localStorage.getItem("posts"));
+let postsLocalStorage;
 
 //postsLocalStorage = JSON.parse(localStorage.getItem("posts"));
 function initPosts(){
     if(postsLocalStorage === null){
         localStorage.setItem("posts", JSON.stringify(posts));
     }
+    postsLocalStorage = JSON.parse(localStorage.getItem("posts"));
 }
 
 function getPosts(){

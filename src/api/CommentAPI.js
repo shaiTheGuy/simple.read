@@ -67,12 +67,13 @@ const comments = [{
     body: 'Don\'t get me wrong, you\'re not going to be literally copy/pasting from stackoverflow all day, but that\'s basically all that debugging is. If you aren\'t solving novel problems at work (and relatively few of us are), that means you\'re looking for solutions to applicable, solved problems. Once the main architectural decisions are made, all that\'s really left is to google the error messages until the computer stops saying \'no\''
 }];
 
-let commentsLocalStorage = JSON.parse(localStorage.getItem("comments"));
+let commentsLocalStorage;
 
 function initComments(){
     if(commentsLocalStorage === null){
         localStorage.setItem("comments", JSON.stringify(comments));
     }
+    commentsLocalStorage = JSON.parse(localStorage.getItem("comments"));
 }
 
 function getCommentsByPost(postId){

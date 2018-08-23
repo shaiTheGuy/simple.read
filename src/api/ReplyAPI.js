@@ -21,12 +21,13 @@ const replies = [{
     body: 'Don\'t get me wrong, you\'re not going to be literally copy/pasting from stackoverflow all day, but that\'s basically all that debugging is. If you aren\'t solving novel problems at work (and relatively few of us are), that means you\'re looking for solutions to applicable, solved problems. Once the main architectural decisions are made, all that\'s really left is to google the error messages until the computer stops saying \'no\''
 }];
 
-let repliesLocalStorage = JSON.parse(localStorage.getItem("replies"));
+let repliesLocalStorage;
 
 function initReplies(){
     if(repliesLocalStorage === null){
         localStorage.setItem("posts", JSON.stringify(replies));
     }
+    repliesLocalStorage = JSON.parse(localStorage.getItem("replies"));
 }
 
 function getRepliesByComment(postId, commentId){

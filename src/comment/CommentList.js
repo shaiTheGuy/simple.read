@@ -14,7 +14,6 @@ export default class CommentList extends Component {
     }
 
     componentDidMount() {
-        initComments();
         this.fetchCommentList();
     }
 
