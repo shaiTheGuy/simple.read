@@ -65,7 +65,6 @@ const posts = [{
 
 let postsLocalStorage;
 
-//postsLocalStorage = JSON.parse(localStorage.getItem("posts"));
 function initPosts(){
     if(postsLocalStorage == null){
         localStorage.setItem("posts", JSON.stringify(posts));
@@ -74,15 +73,13 @@ function initPosts(){
 }
 
 function getPosts(){
-    initPosts();
     return postsLocalStorage;
 }
 
 function getPostById(postId){
-    initPosts();
     let result = null;
 
-    JSON.parse(localStorage.getItem("posts")).map(post => {
+    postsLocalStorage.map(post => {
         if(post.id == postId)
             result = post;
     });
@@ -90,7 +87,7 @@ function getPostById(postId){
 }
 
 function addPost(post){
-    let oldPosts = JSON.parse(localStorage.getItem("posts"));
+    let oldPosts = postsLocalStorage;
     let newPostId = Number(oldPosts[oldPosts.length - 1].id) + Number(1);
     
     post.id = newPostId;

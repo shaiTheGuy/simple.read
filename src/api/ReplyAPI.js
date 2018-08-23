@@ -31,10 +31,9 @@ function initReplies(){
 }
 
 function getRepliesByComment(postId, commentId){
-    initReplies();
     let replyList = [];
 
-    JSON.parse(localStorage.getItem("replies")).map(reply => {
+    repliesLocalStorage.map(reply => {
         if(reply.commentId == commentId && reply.postId == postId)
             replyList.push(reply)
     });
