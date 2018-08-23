@@ -25,7 +25,7 @@ let repliesLocalStorage;
 
 function initReplies(){
     if(repliesLocalStorage === null){
-        localStorage.setItem("posts", JSON.stringify(replies));
+        localStorage.setItem("replies", JSON.stringify(replies));
     }
     repliesLocalStorage = JSON.parse(localStorage.getItem("replies"));
 }
