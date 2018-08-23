@@ -80,7 +80,7 @@ function getPosts(){
 function getPostById(postId){
     let result = null;
 
-    postsLocalStorage.map(post => {
+    JSON.parse(localStorage.getItem("posts")).map(post => {
         if(post.id == postId)
             result = post;
     });
