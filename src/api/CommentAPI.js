@@ -70,7 +70,7 @@ const comments = [{
 let commentsLocalStorage;
 
 function initComments(){
-    if(commentsLocalStorage === null){
+    if(commentsLocalStorage == null){
         localStorage.setItem("comments", JSON.stringify(comments));
     }
     commentsLocalStorage = JSON.parse(localStorage.getItem("comments"));

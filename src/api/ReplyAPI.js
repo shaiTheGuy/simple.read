@@ -24,7 +24,7 @@ const replies = [{
 let repliesLocalStorage;
 
 function initReplies(){
-    if(repliesLocalStorage === null){
+    if(repliesLocalStorage == null){
         localStorage.setItem("replies", JSON.stringify(replies));
     }
     repliesLocalStorage = JSON.parse(localStorage.getItem("replies"));
