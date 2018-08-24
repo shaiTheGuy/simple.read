@@ -77,7 +77,6 @@ function initComments(){
 }
 
 function getCommentsByPost(postId){
-    this.initComments();
     let commentList = [];
 
     commentsLocalStorage.map(comment => {
