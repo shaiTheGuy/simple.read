@@ -53,4 +53,4 @@ function addReply(reply) {
     localStorage.setItem("replies", JSON.stringify(oldReplies));
 }
 
-export { initReplies, replies, getRepliesByComment, addReply };
+export { replies, getRepliesByComment, addReply };

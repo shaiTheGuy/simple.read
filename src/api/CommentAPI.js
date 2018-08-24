@@ -99,4 +99,4 @@ function addComment(comment) {
     localStorage.setItem("comments", JSON.stringify(oldComments));
 }
 
-export { initComments, getCommentsByPost, addComment };
+export { getCommentsByPost, addComment };
