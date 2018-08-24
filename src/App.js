@@ -7,7 +7,9 @@ import { initComments } from './api/CommentAPI';
 import { initReplies } from './api/ReplyAPI';
 
 class App extends Component {
-    constructor(){
+    constructor(props){
+        super(props);
+
         initPosts();
         initComments();
         initReplies();
