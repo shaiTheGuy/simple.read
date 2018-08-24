@@ -23,29 +23,28 @@ const replies = [{
 
 let repliesLocalStorage;
 
-function initReplies(){
-    if(repliesLocalStorage == null){
-        localStorage.setItem("replies", JSON.stringify(replies));
-    }
-    repliesLocalStorage = JSON.parse(localStorage.getItem("replies"));
+if (repliesLocalStorage == null) {
+    localStorage.setItem("replies", JSON.stringify(replies));
 }
+repliesLocalStorage = JSON.parse(localStorage.getItem("replies"));
 
-function getRepliesByComment(postId, commentId){
+
+function getRepliesByComment(postId, commentId) {
     let replyList = [];
 
     repliesLocalStorage.map(reply => {
-        if(reply.commentId == commentId && reply.postId == postId)
+        if (reply.commentId == commentId && reply.postId == postId)
             replyList.push(reply)
     });
     return replyList;
 }
 
-function addReply(reply){
+function addReply(reply) {
     let oldReplies = repliesLocalStorage;
     let repliesOfCurrPost = getRepliesByComment(reply.postId, reply.commentId);
     let newReplyId = repliesOfCurrPost != [] ? Number(repliesOfCurrPost.length) + 1 : 1;
     let currDate = new Date();
-    
+
     reply.id = newReplyId;
     reply.date = currDate.getMonth() + "/" + currDate.getDate() + "/" + currDate.getFullYear();
     reply.points = 0;
@@ -54,4 +53,4 @@ function addReply(reply){
     localStorage.setItem("replies", JSON.stringify(oldReplies));
 }
 
-export {initReplies, replies, getRepliesByComment, addReply};
+export { initReplies, replies, getRepliesByComment, addReply };
