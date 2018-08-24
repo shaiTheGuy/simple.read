@@ -31,6 +31,7 @@ function initReplies(){
 }
 
 function getRepliesByComment(postId, commentId){
+    initReplies()
     let replyList = [];
 
     repliesLocalStorage.map(reply => {

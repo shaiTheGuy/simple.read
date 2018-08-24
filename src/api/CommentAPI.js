@@ -77,6 +77,7 @@ function initComments(){
 }
 
 function getCommentsByPost(postId){
+    initComments();
     let commentList = [];
 
     commentsLocalStorage.map(comment => {
@@ -100,18 +101,4 @@ function addComment(comment){
     localStorage.setItem("comments", JSON.stringify(oldComments));
 }
 
-function upvoteComment(postId, commentId){
-    commentsLocalStorage.map(comment => {
-        if(comment.postId == postId && comment.id == commentId)
-            comment.points = comment.points + 1;
-    });
-}
-
-function downvoteComment(postId, commentId){
-    commentsLocalStorage.map(comment => {
-        if(comment.postId == postId && comment.id == commentId)
-            comment.points = comment.points - 1;
-    });
-}
-
-export {initComments, getCommentsByPost, addComment, upvoteComment, downvoteComment};
+export {initComments, getCommentsByPost, addComment};
