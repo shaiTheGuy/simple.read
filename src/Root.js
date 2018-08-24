@@ -24,9 +24,9 @@ export default class Root extends Component {
                 </header>
                 <main>
                     <Switch>
+                        <Route exact path="/" render={(props) => (<PostList {...props} />)} />
                         <Route path="/post/new" render={(props) => (<NewPost {...props} />)} />
                         <Route path="/post/:id" render={(props) => (<Post {...props} />)} />
-                        <Route exact path="/" render={(props) => (<PostList {...props} />)} />
                         <Route render={(props) => (<PostList {...props} />)} />
                     </Switch>
                 </main>
