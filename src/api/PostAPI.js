@@ -73,12 +73,12 @@ function initPosts(){
 }
 
 function getPosts(){
-    initPosts();
+    this.initPosts();
     return postsLocalStorage;
 }
 
 function getPostById(postId){
-    initPosts();
+    this.initPosts();
     let result = null;
 
     postsLocalStorage.map(post => {
