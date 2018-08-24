@@ -17,6 +17,9 @@ export default class PostList extends Component {
     }
 
     componentDidMount() {
+        initPosts();
+        initComments();
+        initReplies();
         this.fetchPostList();
     }
 
